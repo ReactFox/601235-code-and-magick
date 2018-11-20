@@ -184,10 +184,11 @@
 <script>
   var fireballSize = 22;
   var getFireballSpeed = function (left) {
-    if (left) {
-      return 5;
-    }
-    return 2;
+    return (left)? 5: 2;
+    // if (left) {
+    //   return 5;
+    // }
+    // return 2;
   };
 
   var wizardSpeed = 3;
@@ -198,12 +199,17 @@
   };
 
   var getWizardX = function (width) {
-    return width = 312;
+    // width = (width / 2) - (wizardWidth / 2);
+    // или первая лучше формула? забыл алгебру, совсем :(
+    width = (width - wizardWidth) / 2;
+
+    return width;
   };
 
   var getWizardY = function (height) {
-    return height =  30;
-  }
+    height = (height / 3) * 2;
+    return height;
+  };
 </script>
 <script src="js/game.js"></script>
 
